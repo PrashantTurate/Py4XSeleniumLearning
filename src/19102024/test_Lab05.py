@@ -21,6 +21,10 @@ def test_negative_vwo_free_trial_project3():
     # Start a free trial
     # </a>
 
+    # LINK_TEXT = EXACT Match
+    # anchor_tag_element = driver.find_element(By.LINK_TEXT,"Start a free trial")
+    # anchor_tag_element.click()
+
     # PARTIAL_LINK_TEXT - contains
     anchor_tag_element = driver.find_element(By.PARTIAL_LINK_TEXT,"free trial")
     anchor_tag_element.click()
