@@ -1,0 +1,2 @@
+After Registration URL:  https://awesomeqa.com/ui/index.php?route=account/success
+Your Account Has Been Created!
