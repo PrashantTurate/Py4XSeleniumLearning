@@ -32,10 +32,21 @@ def test_eBayApp_verify_title_prices():
     # for val in list_of_items_price:
     #    print(val.text,end="||")
 
-    for title, price in zip(list_of_items, list_of_items_price):
-        title_value = title.text
-        price_value = price.text
-        print(f"Title:{title_value},Price:{price_value}")
+    title_values = []
+    price_values = []
 
-    time.sleep(5)
+    for title, price in zip(list_of_items, list_of_items_price):
+        title_values.append(title.text)
+        text_price = price.text.replace('$', '').replace(',', '')
+        try:
+            price_values.append(float(text_price))
+            print(f"{title.text} : {price.text}")
+        except ValueError as e:
+            continue
+
+    max_price = max(price_values)
+    min_price = min(price_values)
+    print(f"Maximum Price:${max_price}")
+    print(f"Minimum Price:${min_price}")
+
     driver.quit()
