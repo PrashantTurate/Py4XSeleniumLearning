@@ -56,5 +56,3 @@ def test_js():
         time.sleep(5)
         driver.quit()
 
-    time.sleep(5)
-    driver.quit()
