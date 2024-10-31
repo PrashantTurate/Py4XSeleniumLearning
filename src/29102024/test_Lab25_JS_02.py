@@ -24,7 +24,14 @@ def test_js_executor_demo2():
     # Synchronously Executes JavaScript in the current window/frame.
     driver.execute_script("window.scrollBy(0, 500);")
 
+    # This title we are finding via the JS code.
+    title = driver.execute_script("return document.title")
 
+    # driver.current_url  - Webdriver finding the url via the API request.
+    current_url = driver.execute_script("return document.URL")
+
+    print(current_url)
+    print(title)
 
     time.sleep(5)
     driver.quit()
