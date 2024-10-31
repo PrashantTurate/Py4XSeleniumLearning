@@ -53,6 +53,7 @@ def test_js():
             "return document.querySelector('div#userName').shadowRoot.querySelector('#app2').shadowRoot.querySelector('#pizza');")
         input_box.send_keys("farmhouse")
 
+
         time.sleep(5)
         driver.quit()
 
